@@ -1,6 +1,7 @@
 import React from "react";
 import { ProjectCard } from "./ProjectCard";
 // Github Url
+const ClinicGithub = "https://github.com/assadabdo/Full-Stack-Clinic-";
 const NewestGithub = "https://github.com/assadabdo/News-Application";
 const TuberGithub = "https://github.com/assadabdo/Tuber";
 const ProgresGithub = "https://github.com/assadabdo/progress";
@@ -8,6 +9,7 @@ const WheatherGithub = "https://github.com/assadabdo/Wheather---App";
 const CalcGithub = "https://github.com/assadabdo/Calculator";
 const MusicGithub = "https://github.com/assadabdo/Music-Player";
 // Projects Url
+const ClinicUrl = "https://project-ddbh6.vercel.app/";
 const progresUrl = "https://assadabdo.github.io/progress/";
 const WheatherUrl = "https://muclaculator.netlify.app";
 const MusicUrl = "https://musicplayerapplications.netlify.app";
@@ -15,13 +17,17 @@ const NewestUrl = "https://newsappllication.netlify.app";
 const CalcUrl = "https://symphonious-tapioca-0312d8.netlify.app";
 
 // imges URL
+
 import tuberlogo from "../imgs/Tuber2.png";
 import calclogo from "../imgs/calc.png";
 import Newestlogo from "../imgs/Nweset.png";
 import progresslogo from "../imgs/Progress.png";
 import Wheatherlogo from "../imgs/Wheather app.png";
 import Musiclogo from "../imgs/Music-player3.png";
+import cliniclogo from "../imgs/Clinic.png";
 
+const ClinicDesc =
+  "A web-based clinic platform built with React, React Router, Material UI, Supabase, and Vite that enables patients to create accounts, log in securely, and book appointments online.";
 const progresDesc =
   "A conversion-focused UI section built to display customer reviews and ratings beautifully across mobile and desktop displays.";
 const MusicDesc =
@@ -42,6 +48,13 @@ export const Projects = () => {
       </div>
       <div className="All-projects">
         <ProjectCard
+          name="Full-Stack clinic booking system"
+          url={ClinicUrl}
+          description={ClinicDesc}
+          imgurl={cliniclogo}
+          Giturl={ClinicGithub}
+        ></ProjectCard>
+        <ProjectCard
           name="Tuber"
           url="https://tubery.netlify.app"
           description={tuberDesc}
@@ -56,19 +69,13 @@ export const Projects = () => {
           imgurl={Newestlogo}
           Giturl={NewestGithub}
         ></ProjectCard>
+
         <ProjectCard
           name="Social Proof Landing Page"
           url={progresUrl}
           description={progresDesc}
           imgurl={progresslogo}
           Giturl={ProgresGithub}
-        ></ProjectCard>
-        <ProjectCard
-          name="Wheater App"
-          url={WheatherUrl}
-          description={WheatherDesc}
-          imgurl={Wheatherlogo}
-          Giturl={WheatherGithub}
         ></ProjectCard>
         <ProjectCard
           name="Music Player"

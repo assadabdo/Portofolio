@@ -20,6 +20,9 @@ export const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const title = "Client Message";
+  let em = document.getElementById("email");
+  let n = document.getElementById("name");
+  let m = document.getElementById("message");
 
   const handlesumbit = (e) => {
     e.preventDefault();
@@ -34,9 +37,6 @@ export const Contact = () => {
       .send(serviceId, TemplatId, params, PublicKey)
       .then((respons) => {
         console.log("You have receive the messgae succefully", respons);
-        setEmail("");
-        setMessage("");
-        setName("");
       })
       .catch((error) => {
         console.error("Error while seding", error);
@@ -44,6 +44,9 @@ export const Contact = () => {
     setEmail("");
     setMessage("");
     setName("");
+    em.value = "";
+    n.value = "";
+    m.value = "";
   };
 
   return (
@@ -52,25 +55,35 @@ export const Contact = () => {
       <div className="contact-cont">
         <div className="links">
           <div>
-            <h2>Contact me via :</h2>
+            <h2>Quick Contact links :</h2>
             <ul>
               <li>
                 <EmailIcon
                   sx={{ margin: "0px 6px", color: "var(--primary)" }}
                 ></EmailIcon>{" "}
-                assadabdo665@gmail.com
+                <a href="mailto:assadabdo665@gmail.com" target="_blank">
+                  {" "}
+                  assadabdo665@gmail.com
+                </a>
               </li>
               <li style={{ marginRight: "83px" }}>
                 <WhatsAppIcon
                   sx={{ margin: "0px 6px", color: "var(--primary)" }}
                 ></WhatsAppIcon>
-                +249997173532
+                <a href="https://wa.me/249997173532" target="_blank">
+                  +249997173532
+                </a>
               </li>
               <li style={{ marginRight: "53px" }}>
                 <LinkedInIcon
                   sx={{ margin: "0px 6px", color: "var(--primary)" }}
                 ></LinkedInIcon>
-                'https://assadlindeIn'
+                <a
+                  href="https://www.linkedin.com/in/assad-abdo-b32a1533a"
+                  target="_blank"
+                >
+                  Assad Abdo LinkedIn
+                </a>
               </li>
             </ul>
           </div>
@@ -83,18 +96,21 @@ export const Contact = () => {
         <div className="special">
           <form className="message" onSubmit={handlesumbit}>
             <input
+              id="name"
               onChange={(e) => setName(e.target.value)}
               placeholder="  Your Name "
               type="text"
               required
             ></input>
             <input
+              id="email"
               onChange={(e) => setEmail(e.target.value)}
               placeholder="  Your Email "
               type="text"
               required
             ></input>
             <textarea
+              id="message"
               onChange={(e) => setMessage(e.target.value)}
               placeholder="  write your message.."
               required

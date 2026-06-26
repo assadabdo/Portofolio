@@ -1,7 +1,9 @@
+import { HandPointing } from "phosphor-react";
 import React from "react";
 import Button from "@mui/material/Button";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import logo from "../imgs/WhatsApp Image 2026-06-01 at 10.49.07 PM.jpeg";
+import finger from "../imgs/down-finger.png";
 export const Landing = () => {
   return (
     <div className="landing " id="home">
@@ -38,6 +40,18 @@ export const Landing = () => {
               </Button>
             </a>
           </div>
+          <img
+            className="finger"
+            src={finger}
+            alt="No-finger"
+            style={{ width: "50px", height: "50px", marginLeft: "37px" }}
+          />
+          {/* <HandPointing></HandPointing> */}
+
+          {/* <i
+            class="fa-solid fa-hand-point-down"
+            style={{ fontSize: "32px", color: "blue" }}
+          ></i> */}
         </div>
       </div>
     </div>
