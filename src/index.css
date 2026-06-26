@@ -75,20 +75,15 @@
   color: rgb(0, 0, 0);
   height: 100vh;
   position: relative;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-  background-position: 50% !important;
-  background: #b784d9;
-  background: linear-gradient(
-    90deg,
-    rgba(183, 132, 217, 1) 0%,
-    rgba(232, 46, 46, 1) 50%,
-    rgba(252, 176, 69, 1) 100%
-  ) !important;
-  background-image: url("./imgs/Gemini_Generated_Image_jufxpqjufxpqjufx.png") !important;
+
+  background-color: #283eb6;
+
+  background-image: url("./imgs/Gemini_Generated_Image_jufxpqjufxpqjufx.png") !important ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
 }
 .overlay {
-  /* background-color: #4c3c0a9e; */
   background: linear-gradient(
     135deg,
     rgba(15, 23, 32, 0.85) 0%,

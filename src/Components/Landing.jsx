@@ -4,6 +4,8 @@ import Button from "@mui/material/Button";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import logo from "../imgs/WhatsApp Image 2026-06-01 at 10.49.07 PM.jpeg";
 import finger from "../imgs/down-finger.png";
+import { useState } from "react";
+import { useEffect } from "react";
 export const Landing = () => {
   return (
     <div className="landing " id="home">
